@@ -1,0 +1,18 @@
+package code.indiana.chandisingh.minesweeper;
+
+public class Bomb extends Tile {
+    //////////////////////////Attributes/////////////////////////////
+
+
+
+    /////////////////////////Constructs/////////////////////////////
+
+
+
+    /////////////////////////Methods////////////////////////////////
+    /*
+    public String(){
+        return "You Exploded!";
+    }
+     */
+}
