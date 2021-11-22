@@ -15,7 +15,6 @@ public class Tile {
     public void makeTile() { //make abstract and make tile in bomb and empty class?
         double randDouble= Math.random();
         tileType= randDouble<0.3;
-
     }
     /*public boolean flipTile(){
         cover=false;
