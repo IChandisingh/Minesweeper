@@ -4,14 +4,14 @@ import java.util.List;
 
 public class Board {
     //////////////////////////Attributes/////////////////////////////
-    private int boardHeight;
-    private int boardWidth;
+    //private int boardHeight;
+    //private int boardWidth;
     //number of bombs
     //board array?
      List<List> boardList = new ArrayList<>();
-     private int bombRevealed=0;
-     private int numOfTiles=0;
-     private int tilesChecked=0;
+     private int bombRevealed;
+     private int numOfTiles;
+     private int tilesChecked;
 
     /////////////////////////Constructs/////////////////////////////
 
@@ -23,20 +23,23 @@ public class Board {
         this.boardHeight = newHeight;
     }
     */
-    public void setBombRevealed(int bombRevealed) {
-        this.bombRevealed = bombRevealed;
-    }
+
     public boolean checkBombRevealed(){
         boolean check=bombRevealed>0;
         return check;
     }
-
+    public void setTilesChecked(int num){
+        this.tilesChecked=num;
+    }
+    public void setBombsRevealed(int num){
+        this.bombRevealed=num;
+    }
 
     public List setBoardList(int height, int width){    //makes array of tiles as the board.
 
         numOfTiles=height*width;
-        boardHeight=height;
-        boardWidth=width;
+        //boardHeight=height;
+        //boardWidth=width;
 
         for (int i=0; i<height; i++){
 
@@ -64,7 +67,7 @@ public class Board {
         List obtainedRow = boardList.get(row);
         Tile tile= (Tile) obtainedRow.get(col);
         boolean check=tile.checkTileType();
-        if (check==true){
+        if (check){
             bombRevealed++;
         }
         else{
@@ -73,13 +76,9 @@ public class Board {
         tilesChecked++;
 
     }
-    public boolean checkBoardClear(){
-        if(tilesChecked==numOfTiles){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public boolean checkBoardClear() {
+        boolean boardCleared = tilesChecked == numOfTiles;
+        return boardCleared;
     }
 
 

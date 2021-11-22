@@ -12,15 +12,9 @@ public class Tile {
 
 
     /////////////////////////Methods////////////////////////////////
-    public void makeTile() {
+    public void makeTile() { //make abstract and make tile in bomb and empty class?
         double randDouble= Math.random();
-        boolean check = randDouble<0.3;
-        if(check){
-            tileType=true;
-        }
-        else{
-            tileType=false;
-        }
+        tileType= randDouble<0.3;
 
     }
     /*public boolean flipTile(){

@@ -18,6 +18,9 @@ public class Main {
         boolean bombCheck=false;
         boolean boardCleared=false;
 
+        board.setTilesChecked(0);
+        board.setBombsRevealed(0);
+
         while (!bombCheck && !boardCleared){
             System.out.println("What row do you want to check?");
             int row = scan.nextInt();
