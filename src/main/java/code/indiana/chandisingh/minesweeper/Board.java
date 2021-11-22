@@ -51,7 +51,6 @@ public class Board {
             List<Tile> tileRow= new ArrayList<>();
             List<Integer> printRow= new ArrayList<Integer>();
             for (int n=0; n<width; n++){
-                Random random = new Random();
                 double randNum=Math.random();
                 if (randNum<0.3){
                     Tile tile = new Bomb();
