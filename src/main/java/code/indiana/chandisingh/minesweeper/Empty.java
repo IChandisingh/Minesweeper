@@ -11,6 +11,7 @@ public class Empty extends Tile {
 
 
     /////////////////////////Methods////////////////////////////////
+    //makeEmpty
     /*public int showBombsTotal(){
         return bombsTotal;
     }

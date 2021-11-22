@@ -10,6 +10,7 @@ public class Bomb extends Tile {
 
 
     /////////////////////////Methods////////////////////////////////
+    //makeBomb
     /*
     public String(){
         return "You Exploded!";
