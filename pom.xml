@@ -23,14 +23,14 @@
                 <version>0.8.7</version>
                 <executions>
                     <execution>
-                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
+                    <!-- attached to Maven test phase -->
                     <execution>
                         <id>report</id>
-                        <phase>package</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -53,12 +53,6 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.8.1</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.7</version>
-            <type>maven-plugin</type>
         </dependency>
     </dependencies>
 

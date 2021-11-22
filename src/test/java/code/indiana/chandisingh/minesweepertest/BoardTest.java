@@ -14,6 +14,13 @@ public class BoardTest {
         assertEquals(false,testBoard.checkBoardClear(),"Did not result in correct boolean");
     }
 
+    @Test
+    public void setBoardListTest(){
+        Board testBoard=new Board();
+        testBoard.setBoardList(2,3);
+        assertEquals(6,testBoard.getNumOfTiles(),"Not producing correct number of tiles");
+
+    }
 
 
 

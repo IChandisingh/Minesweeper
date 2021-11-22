@@ -27,6 +27,10 @@ public class Board {
         this.numOfTiles=height*width;
     }
 
+    public int getNumOfTiles(){
+        return this.numOfTiles;
+    }
+
     public boolean checkBombRevealed(){
         boolean check=bombRevealed>0;
         return check;
@@ -41,20 +45,14 @@ public class Board {
     public List setBoardList(int height, int width){    //makes array of tiles as the board.
 
         this.numOfTiles=height*width;
-        //boardHeight=height;
-        //boardWidth=width;
-
         for (int i=0; i<height; i++){
-
             List<Tile> row= new ArrayList<>();
-
             for (int n=0; n<width; n++){
                 Tile tile=new Tile();
                 row.add(tile);
             }
             boardList.add(row);
         }
-
         return boardList;
     }
    /* public String printBoard(){
