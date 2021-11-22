@@ -10,7 +10,7 @@ public class Board {
     //board array?
      List<List> boardList = new ArrayList<>();
      private int bombRevealed;
-     private int numOfTiles=6;
+     private int numOfTiles;
      private int tilesChecked;
 
     /////////////////////////Constructs/////////////////////////////
@@ -23,6 +23,9 @@ public class Board {
         this.boardHeight = newHeight;
     }
     */
+    public void setNumOfTiles(int height, int width){
+        this.numOfTiles=height*width;
+    }
 
     public boolean checkBombRevealed(){
         boolean check=bombRevealed>0;

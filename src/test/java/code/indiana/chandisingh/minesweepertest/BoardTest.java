@@ -9,8 +9,11 @@ public class BoardTest {
     @Test
     public void checkBombsRevealedTest(){
         Board testBoard=new Board();
+        testBoard.setNumOfTiles(2,3);
         testBoard.setTilesChecked(0);
         assertEquals(false,testBoard.checkBoardClear(),"Did not result in correct boolean");
     }
+
+
 
 }
