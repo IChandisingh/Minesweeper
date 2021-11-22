@@ -16,8 +16,7 @@ public abstract class Tile {
 
     /////////////////////////Methods////////////////////////////////
     public void makeTile() { //make abstract and make tile in bomb and empty class?
-        Random random = new Random();
-        int randNum=random.nextInt(9);
+        double randNum=Math.random();
         tileType= randNum<0.3;
     }
     public abstract int getValue();
