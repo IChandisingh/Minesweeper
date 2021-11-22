@@ -3,7 +3,7 @@ package code.indiana.chandisingh.minesweeper;
 public class Tile {
     //////////////////////////Attributes/////////////////////////////
     //type- bomb or empty
-    //private boolean cover = true;
+    //private boolean covered;
     //flagged or not
     private boolean tileType;
 
