@@ -16,6 +16,9 @@ public class Tile {
         double randDouble= Math.random();
         tileType= randDouble<0.3;
     }
+    public void setTileType(boolean tiletype){
+        this.tileType=tiletype;
+    }
     /*public boolean flipTile(){
         cover=false;
     }
