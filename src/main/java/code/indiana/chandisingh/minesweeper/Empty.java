@@ -3,17 +3,17 @@ package code.indiana.chandisingh.minesweeper;
 public class Empty extends Tile {
     //////////////////////////Attributes/////////////////////////////
     //private int bombsTotal;
-
+    int value;
 
 
     /////////////////////////Constructs/////////////////////////////
 
 
-
     /////////////////////////Methods////////////////////////////////
     //makeEmpty
-    /*public int showBombsTotal(){
-        return bombsTotal;
+    //calculateValue
+    public int getValue(){
+        return this.value;
     }
-     */
+
 }

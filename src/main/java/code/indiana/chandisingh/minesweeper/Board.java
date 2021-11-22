@@ -1,6 +1,7 @@
 package code.indiana.chandisingh.minesweeper;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Board {
     //////////////////////////Attributes/////////////////////////////
@@ -8,7 +9,8 @@ public class Board {
     //private int boardWidth;
     //number of bombs
     //board array?
-     List<List> boardList = new ArrayList<>();
+     List<List> tileBoard = new ArrayList<>();
+     List<List> printBoard = new ArrayList<>();
      private int bombRevealed;
      private int numOfTiles;
      private int tilesChecked;
@@ -46,14 +48,29 @@ public class Board {
 
         this.numOfTiles=height*width;
         for (int i=0; i<height; i++){
-            List<Tile> row= new ArrayList<>();
+            List<Tile> tileRow= new ArrayList<>();
+            List<Integer> printRow= new ArrayList<Integer>();
             for (int n=0; n<width; n++){
-                Tile tile=new Tile();
-                row.add(tile);
+                Random random = new Random();
+                int randNum=random.nextInt(9);
+                if (randNum<3){
+                    Tile tile = new Bomb();
+                    tileRow.add(tile);
+                    printRow.add(tile.getValue());
+                }
+                else{
+                    Tile tile = new Empty();
+                    tileRow.add(tile);
+                    printRow.add(0);
+                }
+
+
+
             }
-            boardList.add(row);
+            tileBoard.add(tileRow);
+            printBoard.add(printRow);
         }
-        return boardList;
+        return printBoard;
     }
    /* public String printBoard(){
 
@@ -65,7 +82,7 @@ public class Board {
 
     public void editBoardList(int row, int col){
         //Add in if statement to check that row and columns entered are on the board
-        List obtainedRow = boardList.get(row);
+        List obtainedRow = tileBoard.get(row);
         Tile tile= (Tile) obtainedRow.get(col);
         boolean check=tile.checkTileType();
         if (check){

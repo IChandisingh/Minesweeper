@@ -1,5 +1,7 @@
 package code.indiana.chandisingh.minesweeper;
 import java.util.Scanner;
+import java.util.List;
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
 
@@ -13,7 +15,8 @@ public class Main {
 
         //Board=makeBoard(boardHeight,boardWidth)
         Board board=new Board();
-        board.setBoardList(boardHeight,boardWidth);
+        List gameBoard= board.setBoardList(boardHeight,boardWidth);
+        System.out.println(gameBoard);
 
         boolean bombCheck=false;
         boolean boardCleared=false;

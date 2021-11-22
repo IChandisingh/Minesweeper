@@ -1,11 +1,14 @@
 package code.indiana.chandisingh.minesweeper;
-
-public class Tile {
+import java.util.Random;
+public abstract class Tile {
     //////////////////////////Attributes/////////////////////////////
     //type- bomb or empty
     //private boolean covered;
     //flagged or not
     private boolean tileType;
+    int value;
+    int coordinates;
+
 
 
     /////////////////////////Constructs/////////////////////////////
@@ -13,11 +16,14 @@ public class Tile {
 
     /////////////////////////Methods////////////////////////////////
     public void makeTile() { //make abstract and make tile in bomb and empty class?
-        double randDouble= Math.random();
-        tileType= randDouble<0.3;
+        Random random = new Random();
+        int randNum=random.nextInt(9);
+        tileType= randNum<0.3;
     }
-    public void setTileType(boolean tiletype){
-        this.tileType=tiletype;
+    public abstract int getValue();
+
+    public void setTileType(boolean tileType){
+        this.tileType=tileType;
     }
     /*public boolean flipTile(){
         cover=false;

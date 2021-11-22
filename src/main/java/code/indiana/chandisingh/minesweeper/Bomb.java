@@ -2,7 +2,7 @@ package code.indiana.chandisingh.minesweeper;
 
 public class Bomb extends Tile {
     //////////////////////////Attributes/////////////////////////////
-
+    int value=9;
 
 
     /////////////////////////Constructs/////////////////////////////
@@ -10,10 +10,12 @@ public class Bomb extends Tile {
 
 
     /////////////////////////Methods////////////////////////////////
-    //makeBomb
-    /*
-    public String(){
-        return "You Exploded!";
+
+
+    public String explode(){
+        return"You exploded!";
     }
-     */
+    public int getValue(){
+        return this.value;
+    }
 }
