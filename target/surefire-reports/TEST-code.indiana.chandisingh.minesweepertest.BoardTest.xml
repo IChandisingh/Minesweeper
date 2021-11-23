@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="3" name="code.indiana.chandisingh.minesweepertest.BoardTest" time="0.04" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="code.indiana.chandisingh.minesweepertest.BoardTest" time="0.038" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
@@ -59,51 +59,19 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetNumOfBombs" time="0.021"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList" time="0.036"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfTiles" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetBombsPlaced" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsPlaced" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testAddBomb" time="0.007">
-    <failure message="Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at code.indiana.chandisingh.minesweeper.Board.addBomb(Board.java:118)
-	at code.indiana.chandisingh.minesweepertest.BoardTest.testAddBomb(BoardTest.java:113)
-</failure>
-  </testcase>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfBombs" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testEditBoardList" time="0.008">
-    <failure message="Index 1 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at code.indiana.chandisingh.minesweeper.Board.addBomb(Board.java:118)
-	at code.indiana.chandisingh.minesweeper.Board.setBoardList(Board.java:89)
-	at code.indiana.chandisingh.minesweepertest.BoardTest.testEditBoardList(BoardTest.java:32)
-</failure>
-  </testcase>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetNumOfTiles" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList" time="0">
-    <failure message="Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
-	at java.base/java.util.Objects.checkIndex(Objects.java:359)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at code.indiana.chandisingh.minesweeper.Board.addBomb(Board.java:118)
-	at code.indiana.chandisingh.minesweeper.Board.setBoardList(Board.java:89)
-	at code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList(BoardTest.java:24)
-</failure>
-  </testcase>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testEditBoardList" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsPlaced" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testAddBomb" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfBombs" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetNumOfBombs" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetBombsPlaced" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetTilesChecked" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsRevealed" time="0.001"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetBombsRevealed" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBoardClear" time="0.003"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBombsRevealed" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsRevealed" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBombsRevealed" time="0.002"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetTilesChecked" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBoardClear" time="0"/>
 </testsuite>
