@@ -59,8 +59,8 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.TileTest" name="code.indiana.chandisingh.minesweepertest.TileTest.testGetValue" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.TileTest" name="code.indiana.chandisingh.minesweepertest.TileTest.testGetTileType" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.TileTest" name="code.indiana.chandisingh.minesweepertest.TileTest.testSetValue" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.TileTest" name="code.indiana.chandisingh.minesweepertest.TileTest.testGetTileType" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.TileTest" name="code.indiana.chandisingh.minesweepertest.TileTest.testSetTileType" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.TileTest" name="code.indiana.chandisingh.minesweepertest.TileTest.testGetValue" time="0"/>
 </testsuite>

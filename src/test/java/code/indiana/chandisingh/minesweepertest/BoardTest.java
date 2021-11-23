@@ -105,6 +105,13 @@ public class BoardTest {
         testBoard.setBombsPlaced(2);
         assertEquals(2,testBoard.getBombsPlaced(),"Incorrect number of bombs placed");
     }
+    @Test
+    public void testAddBomb(){
+        Board testBoard=new Board();
 
+        testBoard.setBoardList(1,1);
+        testBoard.addBomb(1,1);
+        assertEquals(1,testBoard.getBombsPlaced(),"Bomb not placed");
+    }
 
 }
