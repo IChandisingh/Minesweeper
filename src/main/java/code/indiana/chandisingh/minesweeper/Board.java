@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Board {
+public class Board<obtainedRow> {
     //////////////////////////Attributes/////////////////////////////
     //private int boardHeight;
     //private int boardWidth;
@@ -24,6 +24,10 @@ public class Board {
 
     /////////////////////////Methods////////////////////////////////
 
+
+    public List<List> getPrintBoard() {
+        return printBoard;
+    }
 
     public void setBombsPlaced(int num) {
         this.bombsPlaced=num;
@@ -65,51 +69,30 @@ public class Board {
         return this.bombRevealed;
     }
 
-    public List setBoardList(int height, int width){    //makes array of tiles as the board - change to set num of bombs to count for test
-
-
-        this.numOfBombs=(int) Math.round(numOfTiles/3f);
+    public List setBoardList(int height, int width){   //makes array of tiles as the board - change to set num of bombs to count for test
 
         this.numOfTiles=height*width;
+        this.numOfBombs= Math.round(numOfTiles/3f);
+        setBombsPlaced(0);
+
         for (int i=0; i<height; i++) {
             List<Tile> tileRow = new ArrayList<>();
             List<Integer> printRow = new ArrayList<>();
             for (int n = 0; n < width; n++) {
                 Tile tile = new Empty();
+                tile.setValue(0);
                 tileRow.add(tile);
                 printRow.add(0);
             }
             tileBoard.add(tileRow);
             printBoard.add(printRow);
-
         }
-        while (bombsPlaced<numOfBombs){
-            int randHeight= (int) (Math.random()*height);
-            int randWidth= (int) (Math.random()*width);
-
-            List obtainedRow = tileBoard.get(randHeight);
-            Tile tile= (Tile) obtainedRow.get(randWidth);
-
-            List obtainedPrintRow = printBoard.get(randHeight);
-            int printTile= (int) obtainedPrintRow.get(randWidth);
-
-            int index1 = obtainedRow.indexOf(tile);
-            int index2=tileBoard.indexOf(obtainedRow);
-
-            if (tile.getValue()<9){
-
-                tile= new Bomb();
-                printTile=tile.getValue();
-                obtainedRow.set(index1, tile);
-                obtainedPrintRow.set(index1,printTile);
-
-                tileBoard.set(index2, obtainedRow);
-                printBoard.set(index2,obtainedPrintRow);
-                bombsPlaced++;
-            }
+        while(numOfBombs>bombsPlaced){
+            addBomb(height,width);
         }
 
-        return printBoard;
+
+        return tileBoard;
     }
 
     public void editBoardList(int row, int col){
@@ -129,6 +112,35 @@ public class Board {
         return this.tilesChecked == this.numOfTiles;
     }
 
+    public void addBomb(int height, int width){
+        int randHeight = (int) (Math.random() * height);
+        int randWidth = (int) (Math.random() * width);
 
+        List<Tile> obtainedRow = new ArrayList<>();
+        obtainedRow = tileBoard.get(randHeight);
+        Tile tile = new Empty();
+        tile = obtainedRow.get(randWidth);
+
+        List<Integer> obtainedPrintRow = printBoard.get(randHeight);
+        int printTile = obtainedPrintRow.get(randWidth);
+
+        int index1 = obtainedRow.indexOf(tile);
+        int index2 = tileBoard.indexOf(obtainedRow);
+
+        if (tile.getValue() < 9) {
+
+            tile = new Bomb();
+            printTile=tile.getValue();
+            obtainedRow.set(index1, tile);
+            obtainedPrintRow.set(index1,printTile);
+
+            tileBoard.set(index2, obtainedRow);
+            printBoard.set(index2,obtainedPrintRow);
+            bombsPlaced++;
+        }
+        System.out.println(bombsPlaced);
+        System.out.println(numOfBombs);
+
+    }
 
 }
