@@ -12,10 +12,15 @@ public class Bomb extends Tile {
     /////////////////////////Methods////////////////////////////////
 
 
-    public String explode(){
+    public String flipTile(){
+
         return"You exploded!";
     }
+
+
     public int getValue(){
         return this.value;
     }
+
+
 }

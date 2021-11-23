@@ -15,5 +15,8 @@ public class Empty extends Tile {
     public int getValue(){
         return this.value;
     }
+    public int flipTile(){
+        return this.value;
+    }
 
 }

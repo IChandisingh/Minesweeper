@@ -1,5 +1,5 @@
 package code.indiana.chandisingh.minesweeper;
-import java.util.Random;
+
 public abstract class Tile {
     //////////////////////////Attributes/////////////////////////////
     //type- bomb or empty
@@ -20,19 +20,22 @@ public abstract class Tile {
         tileType= randNum<0.3;
     }
     public abstract int getValue();
+    //public abstract flipTile();
 
     public void setTileType(boolean tileType){
+
         this.tileType=tileType;
     }
+    public abstract boolean setTileType();
+
+
     /*public boolean flipTile(){
         cover=false;
     }
     public boolean flagTile(){
     }
     */
-    public boolean checkTileType(){
-        return(tileType);
-    }
+
 
 
 }

@@ -1,7 +1,7 @@
 package code.indiana.chandisingh.minesweeper;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
+
 
 public class Board {
     //////////////////////////Attributes/////////////////////////////
@@ -33,6 +33,10 @@ public class Board {
         return this.numOfTiles;
     }
 
+    public int getTilesChecked() {
+        return this.tilesChecked;
+    }
+
     public boolean checkBombRevealed(){
         boolean check=bombRevealed>0;
         return check;
@@ -44,12 +48,12 @@ public class Board {
         this.bombRevealed=num;
     }
 
-    public List setBoardList(int height, int width){    //makes array of tiles as the board.
+    public List setBoardList(int height, int width){    //makes array of tiles as the board - change to set num of bombs to count for test
 
         this.numOfTiles=height*width;
         for (int i=0; i<height; i++){
             List<Tile> tileRow= new ArrayList<>();
-            List<Integer> printRow= new ArrayList<Integer>();
+            List<Integer> printRow= new ArrayList<>();
             for (int n=0; n<width; n++){
                 double randNum=Math.random();
                 if (randNum<0.3){
@@ -83,8 +87,8 @@ public class Board {
         //Add in if statement to check that row and columns entered are on the board
         List obtainedRow = tileBoard.get(row);
         Tile tile= (Tile) obtainedRow.get(col);
-        boolean check=tile.checkTileType();
-        if (check){
+        int check=tile.getValue();
+        if (check==9){
             bombRevealed++;
         }
         else{
