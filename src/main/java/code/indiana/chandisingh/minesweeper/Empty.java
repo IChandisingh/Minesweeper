@@ -16,6 +16,10 @@ public class Empty extends Tile {
         return this.value;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     @Override
     public boolean setTileType() {
         return false;

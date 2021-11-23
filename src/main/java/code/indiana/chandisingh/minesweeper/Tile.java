@@ -1,6 +1,6 @@
 package code.indiana.chandisingh.minesweeper;
 
-public abstract class Tile {
+public abstract class Tile<getTileType> {
     //////////////////////////Attributes/////////////////////////////
     //type- bomb or empty
     //private boolean covered;
@@ -15,16 +15,15 @@ public abstract class Tile {
 
 
     /////////////////////////Methods////////////////////////////////
-    public void makeTile() { //make abstract and make tile in bomb and empty class?
-        double randNum=Math.random();
-        tileType= randNum<0.3;
-    }
     public abstract int getValue();
     //public abstract flipTile();
 
     public void setTileType(boolean tileType){
 
         this.tileType=tileType;
+    }
+    public boolean getTileType(){
+        return this.tileType;
     }
     public abstract boolean setTileType();
 

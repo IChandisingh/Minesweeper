@@ -31,6 +31,28 @@ public class BoardTest {
         assertEquals(1, testBoard.getTilesChecked(),"Does not add to tiles checked counter");
     }
 
+    @Test
+    public void testSetNumOfTiles(){
+        Board testBoard=new Board();
+        testBoard.setNumOfTiles(2,3);
+        assertEquals(6,testBoard.getNumOfTiles(),"Does not get/set correct number of tiles");
+    }
+
+    @Test
+    public void testSetTilesChecked(){
+        Board testBoard=new Board();
+        testBoard.setTilesChecked(2);
+        assertEquals(2,testBoard.getTilesChecked(),"Does not set correct number of tiles checked");
+    }
+
+    @Test
+    public void testSetBombsRevealed(){
+        Board testBoard=new Board();
+        testBoard.setBombsRevealed(2);
+        assertEquals(2,testBoard.getBombRevealed(),"Incorrect number of bombs revealed set");
+    }
+
+
 
 
 }
