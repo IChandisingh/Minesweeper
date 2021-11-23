@@ -28,18 +28,20 @@ public class TileTest {
     @Test
     public void testSetTileType(){
         Tile bomb = new Bomb();
+        Tile empty = new Empty();
         bomb.setTileType();
+        empty.setTileType();
         assertEquals(true,bomb.getTileType(),"incorrect tile type set");
+        assertEquals(false,empty.getTileType(),"incorrect tile type set");
     }
-
-
-
-
     @Test
     public void testGetTileType(){
         Tile bomb = new Bomb();
+        Tile empty = new Empty();
         bomb.setTileType();
+        empty.setTileType();
         assertEquals(true,bomb.getTileType(),"incorrect tile type set");
+        assertEquals(false,empty.getTileType(),"incorrect tile type set");
     }
 
 }

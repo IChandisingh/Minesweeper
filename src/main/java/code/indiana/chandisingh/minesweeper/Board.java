@@ -84,8 +84,6 @@ public class Board<obtainedRow> {
                 tileRow.add(tile);
                 printRow.add(0);
             }
-            tileBoard.add(tileRow);
-            printBoard.add(printRow);
         }
         while(numOfBombs>bombsPlaced){
             addBomb(height,width);
