@@ -37,6 +37,12 @@ public class BoardTest {
         testBoard.setNumOfTiles(2,3);
         assertEquals(6,testBoard.getNumOfTiles(),"Does not get/set correct number of tiles");
     }
+    @Test
+    public void testGetNumOfTiles(){
+        Board testBoard=new Board();
+        testBoard.setNumOfTiles(2,3);
+        assertEquals(6,testBoard.getNumOfTiles(),"Does not get/set correct number of tiles");
+    }
 
     @Test
     public void testSetTilesChecked(){
@@ -44,9 +50,21 @@ public class BoardTest {
         testBoard.setTilesChecked(2);
         assertEquals(2,testBoard.getTilesChecked(),"Does not set correct number of tiles checked");
     }
+    @Test
+    public void testGetTilesChecked(){
+        Board testBoard=new Board();
+        testBoard.setTilesChecked(2);
+        assertEquals(2,testBoard.getTilesChecked(),"Does not set correct number of tiles checked");
+    }
 
     @Test
     public void testSetBombsRevealed(){
+        Board testBoard=new Board();
+        testBoard.setBombsRevealed(2);
+        assertEquals(2,testBoard.getBombRevealed(),"Incorrect number of bombs revealed set");
+    }
+    @Test
+    public void testGetBombsRevealed(){
         Board testBoard=new Board();
         testBoard.setBombsRevealed(2);
         assertEquals(2,testBoard.getBombRevealed(),"Incorrect number of bombs revealed set");
@@ -59,7 +77,30 @@ public class BoardTest {
         testBoard.setNumOfTiles(2,3);
         assertEquals(true,testBoard.checkBoardClear(),"Does not show when board clear");
     }
-
+    @Test
+    public void testSetNumOfBombs(){
+        Board testBoard=new Board();
+        testBoard.setNumOfBombs(2);
+        assertEquals(2,testBoard.getNumOfBombs(),"Incorrect number of bombs");
+    }
+    @Test
+    public void testGetNumOfBombs(){
+        Board testBoard=new Board();
+        testBoard.setNumOfBombs(2);
+        assertEquals(2,testBoard.getNumOfBombs(),"Incorrect number of bombs");
+    }
+    @Test
+    public void testSetBombsPlaced(){
+        Board testBoard=new Board();
+        testBoard.setBombsPlaced(2);
+        assertEquals(2,testBoard.getBombsPlaced(),"Incorrect number of bombs placed");
+    }
+    @Test
+    public void testGetBombsPlaced(){
+        Board testBoard=new Board();
+        testBoard.setBombsPlaced(2);
+        assertEquals(2,testBoard.getBombsPlaced(),"Incorrect number of bombs placed");
+    }
 
 
 }

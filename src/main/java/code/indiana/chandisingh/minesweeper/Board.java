@@ -37,6 +37,10 @@ public class Board {
         return numOfBombs;
     }
 
+    public void setNumOfBombs(int numOfBombs) {
+        this.numOfBombs = numOfBombs;
+    }
+
     public void setNumOfTiles(int height, int width){
         this.numOfTiles=height*width;
     }
@@ -45,15 +49,14 @@ public class Board {
         return this.numOfTiles;
     }
 
-    public int getTilesChecked() {
-        return this.tilesChecked;
-    }
-
     public boolean checkBombRevealed(){
         return bombRevealed>0;
     }
     public void setTilesChecked(int num){
         this.tilesChecked=num;
+    }
+    public int getTilesChecked() {
+        return this.tilesChecked;
     }
     public void setBombsRevealed(int num){
         this.bombRevealed=num;
@@ -108,7 +111,6 @@ public class Board {
 
         return printBoard;
     }
-
 
     public void editBoardList(int row, int col){
         List obtainedRow = tileBoard.get(row);

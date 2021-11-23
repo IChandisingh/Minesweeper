@@ -26,27 +26,27 @@ import java.util.List;
 
 
     public void setBombsPlaced(int num) {
-<span class="nc" id="L29">        this.bombsPlaced=num;</span>
-<span class="nc" id="L30">    }</span>
+<span class="fc" id="L29">        this.bombsPlaced=num;</span>
+<span class="fc" id="L30">    }</span>
 
     public int getBombsPlaced() {
-<span class="nc" id="L33">        return bombsPlaced;</span>
+<span class="fc" id="L33">        return bombsPlaced;</span>
     }
 
     public int getNumOfBombs() {
-<span class="nc" id="L37">        return numOfBombs;</span>
+<span class="fc" id="L37">        return numOfBombs;</span>
     }
 
-    public void setNumOfTiles(int height, int width){
-<span class="fc" id="L41">        this.numOfTiles=height*width;</span>
+    public void setNumOfBombs(int numOfBombs) {
+<span class="fc" id="L41">        this.numOfBombs = numOfBombs;</span>
 <span class="fc" id="L42">    }</span>
 
-    public int getNumOfTiles(){
-<span class="fc" id="L45">        return this.numOfTiles;</span>
-    }
+    public void setNumOfTiles(int height, int width){
+<span class="fc" id="L45">        this.numOfTiles=height*width;</span>
+<span class="fc" id="L46">    }</span>
 
-    public int getTilesChecked() {
-<span class="fc" id="L49">        return this.tilesChecked;</span>
+    public int getNumOfTiles(){
+<span class="fc" id="L49">        return this.numOfTiles;</span>
     }
 
     public boolean checkBombRevealed(){
@@ -55,76 +55,78 @@ import java.util.List;
     public void setTilesChecked(int num){
 <span class="fc" id="L56">        this.tilesChecked=num;</span>
 <span class="fc" id="L57">    }</span>
+    public int getTilesChecked() {
+<span class="fc" id="L59">        return this.tilesChecked;</span>
+    }
     public void setBombsRevealed(int num){
-<span class="fc" id="L59">        this.bombRevealed=num;</span>
-<span class="fc" id="L60">    }</span>
+<span class="fc" id="L62">        this.bombRevealed=num;</span>
+<span class="fc" id="L63">    }</span>
     public int getBombRevealed(){
-<span class="fc" id="L62">        return this.bombRevealed;</span>
+<span class="fc" id="L65">        return this.bombRevealed;</span>
     }
 
     public List setBoardList(int height, int width){    //makes array of tiles as the board - change to set num of bombs to count for test
 
 
-<span class="fc" id="L68">        this.numOfBombs=(int) Math.round(numOfTiles/3f);</span>
+<span class="fc" id="L71">        this.numOfBombs=(int) Math.round(numOfTiles/3f);</span>
 
-<span class="fc" id="L70">        this.numOfTiles=height*width;</span>
-<span class="fc bfc" id="L71" title="All 2 branches covered.">        for (int i=0; i&lt;height; i++) {</span>
-<span class="fc" id="L72">            List&lt;Tile&gt; tileRow = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L73">            List&lt;Integer&gt; printRow = new ArrayList&lt;&gt;();</span>
-<span class="fc bfc" id="L74" title="All 2 branches covered.">            for (int n = 0; n &lt; width; n++) {</span>
-<span class="fc" id="L75">                Tile tile = new Empty();</span>
-<span class="fc" id="L76">                tileRow.add(tile);</span>
-<span class="fc" id="L77">                printRow.add(0);</span>
+<span class="fc" id="L73">        this.numOfTiles=height*width;</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">        for (int i=0; i&lt;height; i++) {</span>
+<span class="fc" id="L75">            List&lt;Tile&gt; tileRow = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L76">            List&lt;Integer&gt; printRow = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">            for (int n = 0; n &lt; width; n++) {</span>
+<span class="fc" id="L78">                Tile tile = new Empty();</span>
+<span class="fc" id="L79">                tileRow.add(tile);</span>
+<span class="fc" id="L80">                printRow.add(0);</span>
             }
-<span class="fc" id="L79">            tileBoard.add(tileRow);</span>
-<span class="fc" id="L80">            printBoard.add(printRow);</span>
+<span class="fc" id="L82">            tileBoard.add(tileRow);</span>
+<span class="fc" id="L83">            printBoard.add(printRow);</span>
 
         }
-<span class="pc bpc" id="L83" title="1 of 2 branches missed.">        while (bombsPlaced&lt;numOfBombs){</span>
-<span class="nc" id="L84">            int randHeight= (int) (Math.random()*height);</span>
-<span class="nc" id="L85">            int randWidth= (int) (Math.random()*width);</span>
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">        while (bombsPlaced&lt;numOfBombs){</span>
+<span class="nc" id="L87">            int randHeight= (int) (Math.random()*height);</span>
+<span class="nc" id="L88">            int randWidth= (int) (Math.random()*width);</span>
 
-<span class="nc" id="L87">            List obtainedRow = tileBoard.get(randHeight);</span>
-<span class="nc" id="L88">            Tile tile= (Tile) obtainedRow.get(randWidth);</span>
+<span class="nc" id="L90">            List obtainedRow = tileBoard.get(randHeight);</span>
+<span class="nc" id="L91">            Tile tile= (Tile) obtainedRow.get(randWidth);</span>
 
-<span class="nc" id="L90">            List obtainedPrintRow = printBoard.get(randHeight);</span>
-<span class="nc" id="L91">            int printTile= (int) obtainedPrintRow.get(randWidth);</span>
+<span class="nc" id="L93">            List obtainedPrintRow = printBoard.get(randHeight);</span>
+<span class="nc" id="L94">            int printTile= (int) obtainedPrintRow.get(randWidth);</span>
 
-<span class="nc" id="L93">            int index1 = obtainedRow.indexOf(tile);</span>
-<span class="nc" id="L94">            int index2=tileBoard.indexOf(obtainedRow);</span>
+<span class="nc" id="L96">            int index1 = obtainedRow.indexOf(tile);</span>
+<span class="nc" id="L97">            int index2=tileBoard.indexOf(obtainedRow);</span>
 
-<span class="nc bnc" id="L96" title="All 2 branches missed.">            if (tile.getValue()&lt;9){</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">            if (tile.getValue()&lt;9){</span>
 
-<span class="nc" id="L98">                tile= new Bomb();</span>
-<span class="nc" id="L99">                printTile=tile.getValue();</span>
-<span class="nc" id="L100">                obtainedRow.set(index1, tile);</span>
-<span class="nc" id="L101">                obtainedPrintRow.set(index1,printTile);</span>
+<span class="nc" id="L101">                tile= new Bomb();</span>
+<span class="nc" id="L102">                printTile=tile.getValue();</span>
+<span class="nc" id="L103">                obtainedRow.set(index1, tile);</span>
+<span class="nc" id="L104">                obtainedPrintRow.set(index1,printTile);</span>
 
-<span class="nc" id="L103">                tileBoard.set(index2, obtainedRow);</span>
-<span class="nc" id="L104">                printBoard.set(index2,obtainedPrintRow);</span>
-<span class="nc" id="L105">                bombsPlaced++;</span>
+<span class="nc" id="L106">                tileBoard.set(index2, obtainedRow);</span>
+<span class="nc" id="L107">                printBoard.set(index2,obtainedPrintRow);</span>
+<span class="nc" id="L108">                bombsPlaced++;</span>
             }
-<span class="nc" id="L107">        }</span>
+<span class="nc" id="L110">        }</span>
 
-<span class="fc" id="L109">        return printBoard;</span>
+<span class="fc" id="L112">        return printBoard;</span>
     }
 
-
     public void editBoardList(int row, int col){
-<span class="fc" id="L114">        List obtainedRow = tileBoard.get(row);</span>
-<span class="fc" id="L115">        Tile tile= (Tile) obtainedRow.get(col);</span>
-<span class="fc" id="L116">        int check=tile.getValue();</span>
-<span class="pc bpc" id="L117" title="1 of 2 branches missed.">        if (check==9){</span>
-<span class="nc" id="L118">            bombRevealed++;</span>
+<span class="fc" id="L116">        List obtainedRow = tileBoard.get(row);</span>
+<span class="fc" id="L117">        Tile tile= (Tile) obtainedRow.get(col);</span>
+<span class="fc" id="L118">        int check=tile.getValue();</span>
+<span class="pc bpc" id="L119" title="1 of 2 branches missed.">        if (check==9){</span>
+<span class="nc" id="L120">            bombRevealed++;</span>
         }
         else{
             //
         }
-<span class="fc" id="L123">        tilesChecked++;</span>
-<span class="fc" id="L124">    }</span>
+<span class="fc" id="L125">        tilesChecked++;</span>
+<span class="fc" id="L126">    }</span>
 
     public boolean checkBoardClear() {
-<span class="fc bfc" id="L127" title="All 2 branches covered.">        return this.tilesChecked == this.numOfTiles;</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        return this.tilesChecked == this.numOfTiles;</span>
     }
 
 
