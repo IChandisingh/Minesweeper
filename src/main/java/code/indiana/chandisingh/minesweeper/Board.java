@@ -47,6 +47,10 @@ public class Board {
         return bombsPlaced;
     }
 
+    public int getNumOfBombs() {
+        return numOfBombs;
+    }
+
     public void setNumOfTiles(int height, int width){
         this.numOfTiles=height*width;
     }
@@ -60,8 +64,7 @@ public class Board {
     }
 
     public boolean checkBombRevealed(){
-        boolean check=bombRevealed>0;
-        return check;
+        return bombRevealed>0;
     }
     public void setTilesChecked(int num){
         this.tilesChecked=num;
@@ -76,7 +79,7 @@ public class Board {
     public List setBoardList(int height, int width){    //makes array of tiles as the board - change to set num of bombs to count for test
 
 
-        this.numOfBombs=Math.round(numOfTiles/3);
+        this.numOfBombs=(int) Math.round(numOfTiles/3);
 
         this.numOfTiles=height*width;
         for (int i=0; i<height; i++) {
@@ -98,16 +101,23 @@ public class Board {
             List obtainedRow = tileBoard.get(randHeight);
             Tile tile= (Tile) obtainedRow.get(randWidth);
 
+            List obtainedPrintRow = printBoard.get(randHeight);
+            int printTile= (int) obtainedPrintRow.get(randWidth);
+
             int index1 = obtainedRow.indexOf(tile);
-
-            tile= new Bomb();
-
-            obtainedRow.set(index1, tile);
-
             int index2=tileBoard.indexOf(obtainedRow);
 
-            tileBoard.set(index2, obtainedRow);
+            if (tile.getValue()<9){
 
+                tile= new Bomb();
+                printTile=tile.getValue();
+                obtainedRow.set(index1, tile);
+                obtainedPrintRow.set(index1,printTile);
+
+                tileBoard.set(index2, obtainedRow);
+                printBoard.set(index2,obtainedPrintRow);
+                bombsPlaced++;
+            }
         }
 
         return printBoard;

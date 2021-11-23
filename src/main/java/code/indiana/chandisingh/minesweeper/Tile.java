@@ -27,6 +27,7 @@ public abstract class Tile<getTileType> {
     }
     public abstract boolean setTileType();
 
+    public abstract void setValue(int i);
 
     /*public boolean flipTile(){
         cover=false;

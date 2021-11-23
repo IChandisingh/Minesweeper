@@ -17,6 +17,9 @@ public class Bomb extends Tile {
         return"You exploded!";
     }
 
+    public void setValue(int value) {
+        this.value = 9;
+    }
 
     public int getValue(){
         return this.value;

@@ -52,6 +52,13 @@ public class BoardTest {
         assertEquals(2,testBoard.getBombRevealed(),"Incorrect number of bombs revealed set");
     }
 
+    @Test
+    public void testCheckBoardClear(){
+        Board testBoard=new Board();
+        testBoard.setTilesChecked(6);
+        testBoard.setNumOfTiles(2,3);
+        assertEquals(true,testBoard.checkBoardClear(),"Does not show when board clear");
+    }
 
 
 
