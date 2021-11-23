@@ -13,7 +13,7 @@ public class TileTest {
         assertEquals(true,tile.checkTileType(),"Incorrect tile type returned.");
     }
 
-     */
+
     @Test
     public void testGetValue(){
         Tile bomb = new Bomb();
@@ -22,4 +22,6 @@ public class TileTest {
     public boolean setTileType(){
         return false;
     }
+
+     */
 }

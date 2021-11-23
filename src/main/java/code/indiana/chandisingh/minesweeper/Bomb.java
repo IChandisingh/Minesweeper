@@ -22,5 +22,10 @@ public class Bomb extends Tile {
         return this.value;
     }
 
+    @Override
+    public boolean setTileType() {
+        return true;
+    }
+
 
 }
