@@ -23,22 +23,8 @@ public class Board {
 
 
     /////////////////////////Methods////////////////////////////////
-    /*
-    public void setHeight(int newHeight) {
-        this.boardHeight = newHeight;
-    }
-    */
 
-    /*
-    public void makeBoard(int height, int width){
-        this.numOfTiles=height*width;
-        this.numOfBombs=Math.round(numOfTiles/3);
-        this.tileboard=new Tile[height][width];
-        for (int i=0; i<height; i++){
-        }
-    }
 
-     */
     public void setBombsPlaced(int num) {
         this.bombsPlaced=num;
     }
@@ -79,7 +65,7 @@ public class Board {
     public List setBoardList(int height, int width){    //makes array of tiles as the board - change to set num of bombs to count for test
 
 
-        this.numOfBombs=(int) Math.round(numOfTiles/3);
+        this.numOfBombs=(int) Math.round(numOfTiles/3f);
 
         this.numOfTiles=height*width;
         for (int i=0; i<height; i++) {
@@ -122,18 +108,9 @@ public class Board {
 
         return printBoard;
     }
-            //tileBoard.add(tileRow);
-            //printBoard.add(printRow);
 
-   /* public String printBoard(){
 
-        for(int i=0;i<boardHeight;i++){
-          List row=boardList.get(i);
-        }
-    }
-    */
     public void editBoardList(int row, int col){
-        //Add in if statement to check that row and columns entered are on the board
         List obtainedRow = tileBoard.get(row);
         Tile tile= (Tile) obtainedRow.get(col);
         int check=tile.getValue();
@@ -147,8 +124,7 @@ public class Board {
     }
 
     public boolean checkBoardClear() {
-        boolean boardCleared = this.tilesChecked == this.numOfTiles;
-        return boardCleared;
+        return this.tilesChecked == this.numOfTiles;
     }
 
 

@@ -13,7 +13,6 @@ public class Main {
         System.out.println("How many tiles wide do you want your board to be?");
         int boardWidth=scan.nextInt();
 
-        //Board=makeBoard(boardHeight,boardWidth)
         Board board=new Board();
         List gameBoard= board.setBoardList(boardHeight,boardWidth);
         System.out.println(gameBoard);
@@ -36,18 +35,6 @@ public class Main {
         }
 
 
-
-        //String gameBoard=board.boardList.toString();
-        //System.out.println(gameBoard);
-
-
-        /*/////////////Testing bomb count variable works//////////////////
-        System.out.println( board.checkBombRevealed());
-        System.out.println("Do you want to explode a bomb?");
-        int explode =scan.nextInt();
-        board.setBombRevealed(explode);
-        System.out.println( board.checkBombRevealed());
-         */
 
 
         }

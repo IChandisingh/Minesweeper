@@ -29,12 +29,6 @@ public abstract class Tile<getTileType> {
 
     public abstract void setValue(int i);
 
-    /*public boolean flipTile(){
-        cover=false;
-    }
-    public boolean flagTile(){
-    }
-    */
 
 
 

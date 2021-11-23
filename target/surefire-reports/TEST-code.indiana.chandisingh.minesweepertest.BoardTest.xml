@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="code.indiana.chandisingh.minesweepertest.BoardTest" time="0.031" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="code.indiana.chandisingh.minesweepertest.BoardTest" time="0.03" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
@@ -59,11 +59,11 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBombsRevealed" time="0.031"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBoardClear" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBombsRevealed" time="0.029"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsRevealed" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetTilesChecked" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testEditBoardList" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetTilesChecked" time="0.001"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBoardClear" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfTiles" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testEditBoardList" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList" time="0"/>
 </testsuite>

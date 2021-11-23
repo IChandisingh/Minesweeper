@@ -21,6 +21,7 @@ public class TileTest {
         Tile bomb = new Bomb();
         Tile empty = new Empty();
         empty.setValue(0);
+        bomb.setValue(0);
         assertEquals(9,bomb.getValue(),"Returns incorrect value");
         assertEquals(0,empty.getValue(),"Returns incorrect value");
     }

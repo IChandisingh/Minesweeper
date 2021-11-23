@@ -13,43 +13,30 @@ import java.util.Arrays;
 <span class="nc" id="L13">        System.out.println(&quot;How many tiles wide do you want your board to be?&quot;);</span>
 <span class="nc" id="L14">        int boardWidth=scan.nextInt();</span>
 
-        //Board=makeBoard(boardHeight,boardWidth)
-<span class="nc" id="L17">        Board board=new Board();</span>
-<span class="nc" id="L18">        List gameBoard= board.setBoardList(boardHeight,boardWidth);</span>
-<span class="nc" id="L19">        System.out.println(gameBoard);</span>
+<span class="nc" id="L16">        Board board=new Board();</span>
+<span class="nc" id="L17">        List gameBoard= board.setBoardList(boardHeight,boardWidth);</span>
+<span class="nc" id="L18">        System.out.println(gameBoard);</span>
 
-<span class="nc" id="L21">        boolean bombCheck=false;</span>
-<span class="nc" id="L22">        boolean boardCleared=false;</span>
+<span class="nc" id="L20">        boolean bombCheck=false;</span>
+<span class="nc" id="L21">        boolean boardCleared=false;</span>
 
-<span class="nc" id="L24">        board.setTilesChecked(0);</span>
-<span class="nc" id="L25">        board.setBombsRevealed(0);</span>
+<span class="nc" id="L23">        board.setTilesChecked(0);</span>
+<span class="nc" id="L24">        board.setBombsRevealed(0);</span>
 
-<span class="nc bnc" id="L27" title="All 4 branches missed.">        while (!bombCheck &amp;&amp; !boardCleared){</span>
-<span class="nc" id="L28">            System.out.println(&quot;What row do you want to check?&quot;);</span>
-<span class="nc" id="L29">            int row = scan.nextInt();</span>
-<span class="nc" id="L30">            System.out.println(&quot;what column do you want to check?&quot;);</span>
-<span class="nc" id="L31">            int col = scan.nextInt();</span>
+<span class="nc bnc" id="L26" title="All 4 branches missed.">        while (!bombCheck &amp;&amp; !boardCleared){</span>
+<span class="nc" id="L27">            System.out.println(&quot;What row do you want to check?&quot;);</span>
+<span class="nc" id="L28">            int row = scan.nextInt();</span>
+<span class="nc" id="L29">            System.out.println(&quot;what column do you want to check?&quot;);</span>
+<span class="nc" id="L30">            int col = scan.nextInt();</span>
 
-<span class="nc" id="L33">            board.editBoardList(row,col);</span>
-<span class="nc" id="L34">            bombCheck=board.checkBombRevealed();</span>
-<span class="nc" id="L35">            boardCleared=board.checkBoardClear();</span>
-<span class="nc" id="L36">        }</span>
-
+<span class="nc" id="L32">            board.editBoardList(row,col);</span>
+<span class="nc" id="L33">            bombCheck=board.checkBombRevealed();</span>
+<span class="nc" id="L34">            boardCleared=board.checkBoardClear();</span>
+<span class="nc" id="L35">        }</span>
 
 
-        //String gameBoard=board.boardList.toString();
-        //System.out.println(gameBoard);
 
 
-        /*/////////////Testing bomb count variable works//////////////////
-        System.out.println( board.checkBombRevealed());
-        System.out.println(&quot;Do you want to explode a bomb?&quot;);
-        int explode =scan.nextInt();
-        board.setBombRevealed(explode);
-        System.out.println( board.checkBombRevealed());
-         */
-
-
-<span class="nc" id="L53">        }</span>
+<span class="nc" id="L40">        }</span>
     }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

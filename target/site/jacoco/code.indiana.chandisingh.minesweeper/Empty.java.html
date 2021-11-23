@@ -2,32 +2,28 @@
 
 <span class="fc" id="L3">public class Empty extends Tile {</span>
     //////////////////////////Attributes/////////////////////////////
-    //private int bombsTotal;
-    int value;
+
+
 
 
     /////////////////////////Constructs/////////////////////////////
 
 
     /////////////////////////Methods////////////////////////////////
-    //makeEmpty
     //calculateValue
     public int getValue(){
-<span class="fc" id="L16">        return this.value;</span>
+<span class="fc" id="L15">        return this.value;</span>
     }
 
     public void setValue(int value) {
-<span class="fc" id="L20">        this.value = value;</span>
-<span class="fc" id="L21">    }</span>
+<span class="fc" id="L19">        this.value = value;</span>
+<span class="fc" id="L20">    }</span>
 
     @Override
     public boolean setTileType() {
-<span class="nc" id="L25">        return false;</span>
+<span class="nc" id="L24">        return false;</span>
     }
-
-    public int flipTile(){
-<span class="nc" id="L29">        return this.value;</span>
-    }
+    //public int flipTile(){return this.value;}
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
