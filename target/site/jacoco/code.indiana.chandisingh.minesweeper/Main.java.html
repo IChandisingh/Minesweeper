@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Minesweeper</a> &gt; <a href="index.source.html" class="el_package">code.indiana.chandisingh.minesweeper</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package code.indiana.chandisingh.minesweeper;
 import java.util.Scanner;
 import java.util.List;
-import java.util.Arrays;
-<span class="nc" id="L5">public class Main {</span>
+<span class="nc" id="L4">public class Main {</span>
     public static void main(String[] args){
 
-<span class="nc" id="L8">        Scanner scan=new Scanner(System.in);</span>
+<span class="nc" id="L7">        Scanner scan=new Scanner(System.in);</span>
 
-<span class="nc" id="L10">        System.out.println(&quot;How many tiles high do you want your board to be?&quot;);</span>
-<span class="nc" id="L11">        int boardHeight=scan.nextInt();</span>
+<span class="nc" id="L9">        System.out.println(&quot;How many tiles high do you want your board to be?&quot;);</span>
+<span class="nc" id="L10">        int boardHeight=scan.nextInt();</span>
 
-<span class="nc" id="L13">        System.out.println(&quot;How many tiles wide do you want your board to be?&quot;);</span>
-<span class="nc" id="L14">        int boardWidth=scan.nextInt();</span>
+<span class="nc" id="L12">        System.out.println(&quot;How many tiles wide do you want your board to be?&quot;);</span>
+<span class="nc" id="L13">        int boardWidth=scan.nextInt();</span>
 
-<span class="nc" id="L16">        Board board=new Board();</span>
-<span class="nc" id="L17">        List gameBoard= board.setBoardList(boardHeight,boardWidth);</span>
-<span class="nc" id="L18">        System.out.println(gameBoard);</span>
+<span class="nc" id="L15">        Board board=new Board();</span>
+<span class="nc" id="L16">        List gameBoard= board.setBoardList(boardHeight,boardWidth);</span>
+<span class="nc" id="L17">        System.out.println(gameBoard);</span>
 
-<span class="nc" id="L20">        boolean bombCheck=false;</span>
-<span class="nc" id="L21">        boolean boardCleared=false;</span>
+<span class="nc" id="L19">        boolean bombCheck=false;</span>
+<span class="nc" id="L20">        boolean boardCleared=false;</span>
 
-<span class="nc" id="L23">        board.setTilesChecked(0);</span>
-<span class="nc" id="L24">        board.setBombsRevealed(0);</span>
+<span class="nc" id="L22">        board.setTilesChecked(0);</span>
+<span class="nc" id="L23">        board.setBombsRevealed(0);</span>
 
-<span class="nc bnc" id="L26" title="All 4 branches missed.">        while (!bombCheck &amp;&amp; !boardCleared){</span>
-<span class="nc" id="L27">            System.out.println(&quot;What row do you want to check?&quot;);</span>
-<span class="nc" id="L28">            int row = scan.nextInt();</span>
-<span class="nc" id="L29">            System.out.println(&quot;what column do you want to check?&quot;);</span>
-<span class="nc" id="L30">            int col = scan.nextInt();</span>
-
-<span class="nc" id="L32">            board.editBoardList(row,col);</span>
-<span class="nc" id="L33">            bombCheck=board.checkBombRevealed();</span>
-<span class="nc" id="L34">            boardCleared=board.checkBoardClear();</span>
-<span class="nc" id="L35">        }</span>
-
+<span class="nc bnc" id="L25" title="All 4 branches missed.">        while (!bombCheck &amp;&amp; !boardCleared){</span>
+<span class="nc" id="L26">            System.out.println(&quot;What row do you want to check?&quot;);</span>
+<span class="nc" id="L27">            int row = scan.nextInt();</span>
+<span class="nc" id="L28">            System.out.println(&quot;what column do you want to check?&quot;);</span>
+<span class="nc" id="L29">            int col = scan.nextInt();</span>
+<span class="nc" id="L30">            board.editBoardList(row,col);</span>
+<span class="nc" id="L31">            bombCheck=board.checkBombRevealed();</span>
+<span class="nc" id="L32">            boardCleared=board.checkBoardClear();</span>
+<span class="nc" id="L33">        }</span>
 
 
 
-<span class="nc" id="L40">        }</span>
+
+<span class="nc" id="L38">        }</span>
     }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

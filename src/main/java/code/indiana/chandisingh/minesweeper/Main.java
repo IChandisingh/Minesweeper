@@ -1,7 +1,6 @@
 package code.indiana.chandisingh.minesweeper;
 import java.util.Scanner;
 import java.util.List;
-import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
 
@@ -28,7 +27,6 @@ public class Main {
             int row = scan.nextInt();
             System.out.println("what column do you want to check?");
             int col = scan.nextInt();
-
             board.editBoardList(row,col);
             bombCheck=board.checkBombRevealed();
             boardCleared=board.checkBoardClear();

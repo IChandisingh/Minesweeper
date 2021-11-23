@@ -16,18 +16,15 @@ public abstract class Tile<getTileType> {
 
     /////////////////////////Methods////////////////////////////////
     public abstract int getValue();
+    public abstract void setValue(int i);
     //public abstract flipTile();
 
-    public void setTileType(boolean tileType){
 
-        this.tileType=tileType;
-    }
-    public boolean getTileType(){
-        return this.tileType;
-    }
+    public abstract boolean getTileType();
+
     public abstract boolean setTileType();
 
-    public abstract void setValue(int i);
+
 
 
 

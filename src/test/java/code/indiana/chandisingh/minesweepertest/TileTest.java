@@ -6,15 +6,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TileTest {
-    /*
-    @Test
-    public void testCheckTileType(){
-        Tile tile=new Tile();
-        tile.setTileType(true);
-        assertEquals(true,tile.checkTileType(),"Incorrect tile type returned.");
-    }
-
-     */
 
     @Test
     public void testGetValue(){
@@ -34,10 +25,21 @@ public class TileTest {
         assertEquals(9,bomb.getValue(),"Returns incorrect value");
         assertEquals(0,empty.getValue(),"Returns incorrect value");
     }
-     /*
-    public boolean setTileType(){
-        return false;
+    @Test
+    public void testSetTileType(){
+        Tile bomb = new Bomb();
+        bomb.setTileType();
+        assertEquals(true,bomb.getTileType(),"incorrect tile type set");
     }
 
-     */
+
+
+
+    @Test
+    public void testGetTileType(){
+        Tile bomb = new Bomb();
+        bomb.setTileType();
+        assertEquals(true,bomb.getTileType(),"incorrect tile type set");
+    }
+
 }

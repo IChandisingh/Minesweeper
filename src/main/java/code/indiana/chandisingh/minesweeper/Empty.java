@@ -25,4 +25,8 @@ public class Empty extends Tile {
     }
     //public int flipTile(){return this.value;}
 
+    @Override
+    public boolean getTileType() {
+        return false;
+    }
 }

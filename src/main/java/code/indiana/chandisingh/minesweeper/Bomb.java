@@ -27,5 +27,8 @@ public class Bomb extends Tile {
         return true;
     }
 
-
+    @Override
+    public boolean getTileType() {
+        return true;
+    }
 }
