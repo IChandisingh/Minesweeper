@@ -1,5 +1,6 @@
 package code.indiana.chandisingh.minesweepertest;
 import code.indiana.chandisingh.minesweeper.Bomb;
+import code.indiana.chandisingh.minesweeper.Empty;
 import code.indiana.chandisingh.minesweeper.Tile;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,7 +13,7 @@ public class TileTest {
         tile.setTileType(true);
         assertEquals(true,tile.checkTileType(),"Incorrect tile type returned.");
     }
-    
+
      */
 
     @Test
