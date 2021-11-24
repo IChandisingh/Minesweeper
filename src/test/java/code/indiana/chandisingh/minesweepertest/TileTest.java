@@ -43,5 +43,35 @@ public class TileTest {
         assertEquals(true,bomb.getTileType(),"incorrect tile type set");
         assertEquals(false,empty.getTileType(),"incorrect tile type set");
     }
+    @Test
+    public void testFlipTile(){
+        Tile bomb = new Bomb();
+        Tile empty = new Empty();
+        bomb.flipTile();
+        empty.flipTile();
+        empty.setValue(0);
+        assertEquals(false, bomb.getCovered(),"covered boolean not false");
+        assertEquals(false, empty.getCovered(),"covered boolean not false");
+        assertEquals(9, bomb.flipTile(),"covered boolean not false");
+        assertEquals(0, empty.flipTile(),"covered boolean not false");
+    }
 
+    @Test
+    public void testGetCovered(){
+        Tile bomb = new Bomb();
+        Tile empty = new Empty();
+        bomb.setCovered(true);
+        empty.setCovered(true);
+        assertEquals(true, bomb.getCovered(),"covered boolean not false");
+        assertEquals(true, empty.getCovered(),"covered boolean not false");
+    }
+    @Test
+    public void testSetCovered(){
+        Tile bomb = new Bomb();
+        Tile empty = new Empty();
+        bomb.setCovered(true);
+        empty.setCovered(true);
+        assertEquals(true, bomb.getCovered(),"covered boolean not false");
+        assertEquals(true, empty.getCovered(),"covered boolean not false");
+    }
 }

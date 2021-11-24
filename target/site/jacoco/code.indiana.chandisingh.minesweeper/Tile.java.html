@@ -3,11 +3,11 @@
 <span class="fc" id="L3">public abstract class Tile&lt;getTileType&gt; {</span>
     //////////////////////////Attributes/////////////////////////////
     //type- bomb or empty
-    //private boolean covered;
     //flagged or not
     private boolean tileType;
     int value;
     int coordinates;
+    private boolean covered;
 
 
 
@@ -17,7 +17,17 @@
     /////////////////////////Methods////////////////////////////////
     public abstract int getValue();
     public abstract void setValue(int i);
-    //public abstract flipTile();
+
+    public int flipTile(){
+<span class="fc" id="L22">        this.covered=false;</span>
+<span class="fc" id="L23">        return this.getValue();</span>
+    }
+    public void setCovered(boolean covered) {
+<span class="fc" id="L26">        this.covered = covered;</span>
+<span class="fc" id="L27">    }</span>
+    public boolean getCovered(){
+<span class="fc" id="L29">        return this.covered;</span>
+    }
 
 
     public abstract boolean getTileType();

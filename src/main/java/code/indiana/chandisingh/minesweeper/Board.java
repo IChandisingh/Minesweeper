@@ -91,11 +91,10 @@ public class Board<obtainedRow> {
         }
         setTilesChecked(0);
         setBombsRevealed(0);
-
         return printBoard;
     }
 
-    public void editBoardList(int row, int col){
+    public void editBoard(int row, int col){
         List obtainedRow = tileBoard.get(row);
         Tile tile= (Tile) obtainedRow.get(col);
         int check=tile.getValue();
@@ -133,14 +132,12 @@ public class Board<obtainedRow> {
             printTile=tile.getValue();
             obtainedRow.set(index1, tile);
             obtainedPrintRow.set(index1,printTile);
-
             tileBoard.set(index2, obtainedRow);
             printBoard.set(index2,obtainedPrintRow);
             bombsPlaced++;
         }
         System.out.println(bombsPlaced);
         System.out.println(numOfBombs);
-
     }
 
 }

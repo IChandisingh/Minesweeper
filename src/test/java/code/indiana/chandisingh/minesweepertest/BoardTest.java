@@ -27,11 +27,11 @@ public class BoardTest {
     }
 
     @Test
-    public void testEditBoardList(){
+    public void testEditBoard(){
         Board testBoard=new Board();
         testBoard.setBoardList(2,3);
         testBoard.setTilesChecked(0);
-        testBoard.editBoardList(1,1);
+        testBoard.editBoard(1,1);
         assertEquals(1, testBoard.getTilesChecked(),"Does not add to tiles checked counter");
     }
 
