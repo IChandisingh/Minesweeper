@@ -70,7 +70,6 @@ public class Board<obtainedRow> {
     }
 
     public List setBoardList(int height, int width){   //makes array of tiles as the board - change to set num of bombs to count for test
-
         this.numOfTiles=height*width;
         this.numOfBombs= Math.round(numOfTiles/3f);
         setBombsPlaced(0);
@@ -90,9 +89,10 @@ public class Board<obtainedRow> {
         while(numOfBombs>bombsPlaced){
             addBomb(height,width);
         }
+        setTilesChecked(0);
+        setBombsRevealed(0);
 
-
-        return tileBoard;
+        return printBoard;
     }
 
     public void editBoardList(int row, int col){

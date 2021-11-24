@@ -13,14 +13,13 @@ public class Main {
         int boardWidth=scan.nextInt();
 
         Board board=new Board();
+
         List gameBoard= board.setBoardList(boardHeight,boardWidth);
         System.out.println(gameBoard);
 
         boolean bombCheck=false;
         boolean boardCleared=false;
 
-        board.setTilesChecked(0);
-        board.setBombsRevealed(0);
 
         while (!bombCheck && !boardCleared){
             System.out.println("What row do you want to check?");

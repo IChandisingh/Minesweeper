@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="code.indiana.chandisingh.minesweepertest.BoardTest" time="0.038" errors="0" skipped="0">
+<testsuite tests="15" failures="0" name="code.indiana.chandisingh.minesweepertest.BoardTest" time="0.033" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
@@ -27,7 +27,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:/Program Files/Java/apache-maven-3.8.3-bin/apache-maven-3.8.3/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\indic\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\indic\bin;C:\Python39\Scripts;C:\Python39;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Java\jdk-17.0.1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\apache-maven-3.8.3-bin\apache-maven-3.8.3\bin;C:\Users\indic\AppData\Local\Microsoft\WindowsApps;C:\Users\indic\AppData\Local\atom\bin;C:\Users\indic\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\indic\AppData\Local\GitHubDesktop\bin;C:\Users\indic\AppData\Roaming\npm;C:\Users\indic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\indic\.dotnet\tools;C:\Users\indic\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\indic\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\indic\bin;C:\Python39\Scripts;C:\Python39;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Java\jdk-17.0.1\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\apache-maven-3.8.3-bin\apache-maven-3.8.3\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin;C:\Users\indic\AppData\Local\Microsoft\WindowsApps;C:\Users\indic\AppData\Local\atom\bin;C:\Users\indic\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Users\indic\AppData\Local\GitHubDesktop\bin;C:\Users\indic\AppData\Roaming\npm;C:\Users\indic\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\indic\.dotnet\tools;C:\Users\indic\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
     <property name="maven.conf" value="C:/Program Files/Java/apache-maven-3.8.3-bin/apache-maven-3.8.3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="61.0"/>
@@ -59,19 +59,19 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList" time="0.036"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBombsRevealed" time="0.032"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetTilesChecked" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetTilesChecked" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsRevealed" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetBombsRevealed" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfTiles" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBoardList" time="0.001"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfBombs" time="0"/>
+  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetNumOfBombs" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetNumOfTiles" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testEditBoardList" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsPlaced" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testAddBomb" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetNumOfBombs" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetNumOfBombs" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetBombsPlaced" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetTilesChecked" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testGetBombsRevealed" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetBombsRevealed" time="0"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBombsRevealed" time="0.002"/>
-  <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testSetTilesChecked" time="0"/>
   <testcase classname="code.indiana.chandisingh.minesweepertest.BoardTest" name="code.indiana.chandisingh.minesweepertest.BoardTest.testCheckBoardClear" time="0"/>
 </testsuite>
