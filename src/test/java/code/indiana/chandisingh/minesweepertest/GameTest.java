@@ -33,7 +33,14 @@ public class GameTest {
         testGame.setBoardCleared(false);
         testGame.setBombCheck(false);
         assertEquals(true,testGame.checkContinueGame(),"continue check not working");
+        testGame.setBoardCleared(true);
+        testGame.setBombCheck(false);
+        assertEquals(false,testGame.checkContinueGame(),"continue check not working");
+        testGame.setBoardCleared(false);
+        testGame.setBombCheck(true);
+        assertEquals(false,testGame.checkContinueGame(),"continue check not working");
     }
+
     @Test
     public void testStartGame(){
         Game testGame=new Game();
