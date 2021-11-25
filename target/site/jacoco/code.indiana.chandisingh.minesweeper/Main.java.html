@@ -12,28 +12,22 @@ import java.util.List;
 <span class="nc" id="L12">        System.out.println(&quot;How many tiles wide do you want your board to be?&quot;);</span>
 <span class="nc" id="L13">        int boardWidth=scan.nextInt();</span>
 
-<span class="nc" id="L15">        Board board=new Board();</span>
-
-<span class="nc" id="L17">        List gameBoard= board.setBoardList(boardHeight,boardWidth);</span>
-<span class="nc" id="L18">        System.out.println(gameBoard);</span>
-
-<span class="nc" id="L20">        boolean bombCheck=false;</span>
-<span class="nc" id="L21">        boolean boardCleared=false;</span>
+<span class="nc" id="L15">        Game game=new Game();</span>
+<span class="nc" id="L16">        System.out.println(game.startGame(boardHeight,boardWidth));</span>
 
 
-<span class="nc bnc" id="L24" title="All 4 branches missed.">        while (!bombCheck &amp;&amp; !boardCleared){</span>
-<span class="nc" id="L25">            System.out.println(&quot;What row do you want to check?&quot;);</span>
-<span class="nc" id="L26">            int row = scan.nextInt();</span>
-<span class="nc" id="L27">            System.out.println(&quot;what column do you want to check?&quot;);</span>
-<span class="nc" id="L28">            int col = scan.nextInt();</span>
-<span class="nc" id="L29">            board.editBoard(row,col);</span>
-<span class="nc" id="L30">            bombCheck=board.checkBombRevealed();</span>
-<span class="nc" id="L31">            boardCleared=board.checkBoardClear();</span>
-<span class="nc" id="L32">        }</span>
+
+<span class="nc bnc" id="L20" title="All 2 branches missed.">        while (game.checkContinueGame()) {</span>
+<span class="nc" id="L21">            System.out.println(&quot;What row do you want to check?&quot;);</span>
+<span class="nc" id="L22">            int row = scan.nextInt();</span>
+<span class="nc" id="L23">            System.out.println(&quot;what column do you want to check?&quot;);</span>
+<span class="nc" id="L24">            int col = scan.nextInt();</span>
+<span class="nc" id="L25">            game.haveTurn(row,col);</span>
+<span class="nc" id="L26">        }</span>
 
 
 
 
-<span class="nc" id="L37">        }</span>
+<span class="nc" id="L31">        }</span>
     }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

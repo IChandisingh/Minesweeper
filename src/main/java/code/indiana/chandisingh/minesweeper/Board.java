@@ -95,11 +95,12 @@ public class Board<obtainedRow> {
     }
 
     public void editBoard(int row, int col){
-        List obtainedRow = tileBoard.get(row);
-        Tile tile= (Tile) obtainedRow.get(col);
+        List obtainedRow = tileBoard.get(row-1);
+        Tile tile= (Tile) obtainedRow.get(col-1);
         int check=tile.getValue();
         if (check==9){
             bombRevealed++;
+            System.out.println("BOOM!");
         }
         else{
             //
